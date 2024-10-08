@@ -1,9 +1,9 @@
-public class Sorting {
-    private static void swap(int[] arr, int i, int j) {
+public class L1_Sorting {
+    public static void swap(int[] arr, int i, int j) {
         arr[j] = (arr[i]+arr[j])-(arr[i]=arr[j]);
     }
 
-    private static void selectionSort(int[] arr) {
+    public static void selectionSort(int[] arr) {
         int n = arr.length;
         
         for (int i=0; i<n; i++) {
@@ -21,7 +21,7 @@ public class Sorting {
         }
     }
 
-    private static void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         int n = arr.length;
 
         for (int i=0; i<n-1; i++) {
@@ -35,7 +35,7 @@ public class Sorting {
         }
     }
 
-    private static void insertionSort(int[] arr) {
+    public static void insertionSort(int[] arr) {
         int n = arr.length;
 
         for (int i=0; i<n; i++) {
@@ -51,7 +51,7 @@ public class Sorting {
         }
     }
 
-    private static void merge(int[] arr, int s, int e, int mid) {
+    public static void merge(int[] arr, int s, int e, int mid) {
         int[] ans = new int[e-s+1];
 
         int i=s, j=mid+1, k=0;
@@ -84,7 +84,7 @@ public class Sorting {
 
     }
 
-    private static void mergeSort(int[] arr, int s, int e) {
+    public static void mergeSort(int[] arr, int s, int e) {
         if (s>=e) return;
         
         int mid = (s+e)/2;
@@ -95,11 +95,11 @@ public class Sorting {
         merge(arr, s, e, mid);
     }
 
-    private static void mergeSort(int[] arr)  {
+    public static void mergeSort(int[] arr)  {
         mergeSort(arr, 0, arr.length-1);
     }
 
-    private static void quickSort(int[] arr, int s, int e) {
+    public static void quickSort(int[] arr, int s, int e) {
         if (s >= e) return;
     
         int pivot = arr[s];
@@ -125,11 +125,11 @@ public class Sorting {
         quickSort(arr, pivotIdx + 1, e);
     }
     
-    private static void quickSort(int[] arr) {
+    public static void quickSort(int[] arr) {
         quickSort(arr, 0, arr.length-1);
     }
 
-    private static void dutchNationalFlag(int[] arr) {
+    public static void dutchNationalFlag(int[] arr) {
         int low = 0, mid = 0, high = arr.length-1;
 
         while (mid<=high) {
