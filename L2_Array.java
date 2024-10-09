@@ -437,7 +437,7 @@ public class L2_Array {
         int repeating = missing - sum;
 
 
-        return new int[]{repeating, missing};
+        return new int[]{missing, repeating};
 
     }
 
@@ -455,12 +455,13 @@ public class L2_Array {
         }
         sc.nextLine();
 
-        int target = sc.nextInt();
-        sc.nextLine();
+        int[] ans = missingRepeatingNumber(arr);
 
-        List<List<Integer>> ans = threesum(arr, target);
-
-        System.out.println(ans);
+        for (int a: ans) {
+            System.out.print(a);
+            System.out.print(" ");
+        }
+        System.out.println();
 
 
         sc.close();
