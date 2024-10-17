@@ -13,7 +13,7 @@ public class L2_Array {
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int i, int j) {
         arr[j] = (arr[i]+arr[j])-(arr[i]=arr[j]);
     }
 
@@ -69,7 +69,6 @@ public class L2_Array {
 
         return ans;
     }
-
 
     public static int majorityElement(int[] arr) {
         // Element appearing > n/2 times :
@@ -129,7 +128,6 @@ public class L2_Array {
         return cnt1 > n/3 ? el1 : cnt2 > n/3 ? el2 : -1;
     }
 
-    
     public static int kadane(int[] arr) {
         int curr=0;
         int ans = Integer.MIN_VALUE;
@@ -142,7 +140,6 @@ public class L2_Array {
         return ans;
     }
 
-    
     public static Pair<Integer> maxSumSubarray(int[] arr) {
         int start=0, end=0, n=arr.length, s=0, e=0;
 
@@ -167,7 +164,6 @@ public class L2_Array {
         return new Pair<>(start, end);
 
     }
-
 
     public static int[] nextPermutation(int[] arr) {
         int n = arr.length;
@@ -202,7 +198,6 @@ public class L2_Array {
         return ans;
     }
 
-
     public static void setMatrixZero(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
 
@@ -232,7 +227,6 @@ public class L2_Array {
         }
 
     }
-
 
     public static void spiralTraversal(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
@@ -274,7 +268,6 @@ public class L2_Array {
         }
     }
 
-
     public static void rotateMatrix(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
 
@@ -297,7 +290,6 @@ public class L2_Array {
             }
         }
     }
-
 
     public static List<List<Integer>> threesum(int[] arr, int target) {
         
@@ -352,7 +344,6 @@ public class L2_Array {
 
         return ans;
     }
-
 
     public static List<List<Integer>> foursum(int[] arr, int target) {
         // int n = arr.length;
@@ -420,7 +411,6 @@ public class L2_Array {
         return ans;
         
     }
-
 
     public static int[] missingRepeatingNumber(int[] arr) {
         int n = arr.length;
