@@ -118,6 +118,54 @@ public class L3_BinarySearch {
 
         return ans;
     }
+
+    public static double findMedianSortedArrays(int[] arr1, int[] arr2) {
+        if (arr1.length > arr2.length) {
+            int[] tmp1 = arr1;
+            arr1 = arr2;
+            arr2 = tmp1;
+        }
+
+        int m = arr1.length;
+        int n = arr2.length;
+
+        int capacity = (m+n)/2;
+
+        int s = Math.max(0, capacity-n);
+        int e = Math.min(m, capacity);
+
+        while (s<=e) {
+            int mid1 = (s+e)/2;
+            int mid2 = capacity - mid1;
+
+            int l1 = mid1 >= 1 ? arr1[mid1-1] : Integer.MIN_VALUE;
+            int l2 = mid2 >= 1 ? arr2[mid2-1] : Integer.MIN_VALUE;
+            int r1 = mid1 < m ? arr1[mid1] : Integer.MAX_VALUE;
+            int r2 = mid2 < n ? arr2[mid2] : Integer.MAX_VALUE;
+
+            if (l1 <= r2 && l2 <= r1) {
+                // even
+                if ((m+n)%2==0)
+                    return (double) (Math.max(l1, l2) + Math.min(r1, r2))/2.0;
+
+                // odd
+                else
+                    return Math.min(r1, r2);
+            }
+
+            else if (l1 > r2) e = mid1-1;
+            else s = mid1+1;
+
+        }
+
+        return s;
+    }
+
+    public static double minimizeDistanceGasStations(int[] arr, int k) {
+        // Code here
+
+        return -1;
+    }
     
 
     public static void main(String[] args) {
