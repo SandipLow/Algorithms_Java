@@ -161,11 +161,41 @@ public class L3_BinarySearch {
         return s;
     }
 
-    public static double minimizeDistanceGasStations(int[] arr, int k) {
-        // Code here
+    private static int numberOfGasStationsRequired(double dist, int[] arr) {
+        int cnt = 0, n = arr.length;
 
-        return -1;
+        for (int i=0; i<n-1; i++) {
+            double gap = arr[i+1]-arr[i];
+            int tmp = (int) Math.floor(gap / dist);
+            cnt+=tmp;
+        }
+
+        return cnt;
     }
+ 
+    public static double minimizeDistanceGasStations(int[] arr, int k){
+        // Write your code here.
+        int n = arr.length;
+        
+        double s = 0;
+        double e = 0;
+
+        for (int i=0; i<n-1; i++) e = Math.max(arr[i+1]-arr[i], e);
+
+        while (e-s > Math.pow(10,-6)) {
+            double mid = (s+e)/2;
+
+            int cnt = numberOfGasStationsRequired(mid, arr);
+            
+            if (cnt > k) s = mid;
+            else e = mid;
+
+        }
+
+        return e;
+    }
+
+    
     
 
     public static void main(String[] args) {
