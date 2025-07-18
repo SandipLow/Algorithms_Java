@@ -4,10 +4,20 @@ This repository contains various algorithms implemented in Java. Each algorithm 
 
 ## Table of Contents
 
+- [Maths Algorithms](#maths-algorithms)
 - [Sorting Algorithms](#sorting-algorithms)
 - [Array Manipulations](#array-manipulations)
 - [Binary Search](#binary-search)
 - [Stack Operations](#stack-operations)
+
+## Maths Algorithms
+
+Implemented in [L0_Maths.java](L0_Maths.java), this file contains various mathematical algorithms such as:
+
+- Prime Number Check
+- Sieve of Eratosthenes
+- GCD (Greatest Common Divisor)
+- Get Digits of a Number
 
 ## Sorting Algorithms
 
