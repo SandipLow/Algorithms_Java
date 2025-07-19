@@ -57,6 +57,20 @@ Implemented in [L3_BinarySearch.java](L3_BinarySearch.java), this file contains 
 - Find Median of Two Sorted Arrays
 - Minimize Maximum Distance to Gas Stations
 
+## String Operations
+
+Implemented in [L4_String.java](L4_String.java), this file contains various string manipulation techniques such as:
+
+- Get Words from String
+- Valid Parentheses
+- Longest Palindromic Substring
+
+## Linked List Operations
+
+Implemented in [L5_LinkedList.java](L5_LinkedList.java), this file contains linked list operations such as:
+
+- Tortoise and Hare Algorithm
+
 ## Stack Operations
 
 Implemented in [L8_Stack.java](L8_Stack.java), this file contains stack operations such as:
