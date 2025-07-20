@@ -69,7 +69,10 @@ Implemented in [L4_String.java](L4_String.java), this file contains various stri
 
 Implemented in [L5_LinkedList.java](L5_LinkedList.java), this file contains linked list operations such as:
 
+- Reverse Linked List
 - Tortoise and Hare Algorithm
+- Detect Cycle in Linked List
+- Intersection of Two Linked Lists
 
 ## Stack Operations
 
