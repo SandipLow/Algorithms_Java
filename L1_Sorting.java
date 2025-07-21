@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class L1_Sorting {
     public static void swap(int[] arr, int i, int j) {
         arr[j] = (arr[i]+arr[j])-(arr[i]=arr[j]);
@@ -123,6 +125,41 @@ public class L1_Sorting {
         quickSort(arr, 0, arr.length-1);
     }
 
+    public static void countSort(int arr[]) {
+        int maxi = Integer.MIN_VALUE, n = arr.length;
+
+        for (int a: arr) {
+            maxi = Integer.max(a, maxi);
+        }
+
+        int[] count = new int[maxi+1];
+
+        for (int a: arr) {
+            count[a]++;
+        }
+
+        int j=0, i=0;
+
+        while (i<n && j<=maxi) {
+            while (count[j]>0) {
+                arr[i++] = j;
+                count[j]--;
+            }
+            j++;
+        }
+    }
+
+    public static void heapSort(int[] arr) {
+        int n = arr.length;
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+
+        for (int a: arr) heap.add(a);
+
+        for (int i=0; i<n; i++) {
+            arr[i] = heap.poll();
+        }
+    }
+
     public static void dutchNationalFlag(int[] arr) {
         int low = 0, mid = 0, high = arr.length-1;
 
@@ -143,10 +180,10 @@ public class L1_Sorting {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 0, 0, 1, 2, 0, 2, 1 };
+        int[] arr = { 1, 5, 4, 2, 1, 4 };
         int n = arr.length;
 
-        dutchNationalFlag(arr);
+        heapSort(arr);
 
 
         for (int i = 0; i < n; i++) {

@@ -34,16 +34,14 @@ public class L0_Maths {
     }
 
     public static boolean checkPrime(int num) {
+        // common base cases
         if (num<=1) return false;
         if (num<=3) return true;
         if (num%2==0 || num%3==0) return false;
 
-        int i = 5;
-        while (i*i <= num) {
-            if (num%i==0 || num%(i+2)==0)
-                return false;
-
-            i+=6;
+        // check for divisibility from 5 to Sqrt(num)
+        for (int i=5; i<(int)Math.sqrt(num); i++) {
+            if (num % i==0) return false;
         }
 
         return true;

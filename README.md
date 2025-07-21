@@ -28,6 +28,8 @@ Implemented in [L1_Sorting.java](L1_Sorting.java), this file contains various so
 - Insertion Sort
 - Merge Sort
 - Quick Sort
+- Counting Sort
+- Heap Sort
 - Dutch National Flag
 
 ## Array Manipulations
